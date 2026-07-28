@@ -1,10 +1,11 @@
-const { processLatestPatch } = require("../patchbot");
+const { runPatchWorkflow } = require("../patchbot/runner");
 
 let running = false;
 
 async function checkPatches(client) {
 
-    if (running) return;
+    if (running)
+        return;
 
     running = true;
 
@@ -12,36 +13,38 @@ async function checkPatches(client) {
 
         console.log("🔎 Buscando nuevos parches...");
 
-        const patch = await processLatestPatch();
-const { publishPatch } = require("../discord/publisher");
+        const executed = await runPatchWorkflow(client);
 
-if (patch) {
+        if (executed) {
 
-    console.log("📢 Publicando en Discord...");
+            console.log("✅ Flujo del parche completado.");
 
-    await publishPatch(client, patch);
+        } else {
 
-    console.log("✅ Publicado.");
-
-} else {
-
-            console.log("No hay parches nuevos.");
+            console.log("📄 No hay parches nuevos.");
 
         }
 
     } catch (err) {
 
+        console.error("❌ Error en el watcher:");
+
         console.error(err);
 
-    }
+    } finally {
 
-    running = false;
+        running = false;
+
+    }
 
 }
 
 function startWatcher(client, interval = 15 * 60 * 1000) {
 
-    console.log("Watcher iniciado.");
+    console.log("====================================");
+    console.log("🚀 Watcher iniciado.");
+    console.log(`⏱ Revisando cada ${interval / 60000} minutos.`);
+    console.log("====================================");
 
     checkPatches(client);
 
