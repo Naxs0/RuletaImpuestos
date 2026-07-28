@@ -1,32 +1,29 @@
-const { chromium } = require("playwright");
+const axios = require("axios");
+const cheerio = require("cheerio");
 
 async function downloadPatch(url) {
 
-    const browser = await chromium.launch({
-        headless: true
+    const { data } = await axios.get(url, {
+        headers: {
+            "User-Agent": "Mozilla/5.0"
+        }
     });
 
-    const page = await browser.newPage();
+    const $ = cheerio.load(data);
 
-    await page.goto(url, {
-        waitUntil: "networkidle"
-    });
+    const raw = $("#app").attr("data-page");
 
-    await page.waitForSelector(".UpdateNotesPage__Article");
+    if (!raw) {
+        throw new Error("No se encontró data-page.");
+    }
 
-    const title = await page.locator("h1").first().innerText();
-
-    const html = await page
-        .locator(".UpdateNotesPage__Article")
-        .innerHTML();
-
-    await browser.close();
+    const json = JSON.parse(raw.replace(/&quot;/g, '"'));
 
     return {
 
-        title,
+        title: json.props.updateNote.name,
 
-        html
+        html: json.props.updateNote.body
 
     };
 
