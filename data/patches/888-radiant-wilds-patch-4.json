@@ -1,0 +1,229 @@
+{
+  "id": 888,
+  "title": "Radiant Wilds Patch 4",
+  "url": "https://patchbot.io/games/albion-online/articles/888-radiant-wilds-patch-4",
+  "downloadedAt": "2026-07-28T03:17:25.197Z",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "This patch increases the loot and frequency of Keeper Uprising mobs, and brings some improvements to the Region Queue system, loot distribution, player navigation, and the Armory. It also expands Dynamic Spawn Rates, and makes some important combat balance changes and bug fixes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Note: With this patch, Vulkan support has been disabled for Android devices, as it could cause crashes while its performance benefits were unclear. We will continue to investigate these crashes in order to potentially re-enable it in the future."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Keeper Uprising Changes",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Mammoth Hunters and Oracles drop significantly more loot",
+            "As the uprising intensifies, Mammoth Hunters can be found more often"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Region Queue Changes",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "A new Priority Access right can be granted to guild membersPlayers who have this right will always be ahead of players in the queue without itPlayers with Priority Access will remove their lowest priority ally when entering a regionPriority Access can be granted by guild members with the requisite permission; by default this is the Guild Master and Right Hand",
+            "Players who have this right will always be ahead of players in the queue without it",
+            "Players with Priority Access will remove their lowest priority ally when entering a region",
+            "Priority Access can be granted by guild members with the requisite permission; by default this is the Guild Master and Right Hand",
+            "Added a chat command, /rq list, to display the region queue priorities of parties in a contingentIt is possible to display only the parties in your guild by using /rq list guildThe ability to use this command can be set via Guilds Rights Management, with Guild Master and Right-Hand having the right by default",
+            "It is possible to display only the parties in your guild by using /rq list guild",
+            "The ability to use this command can be set via Guilds Rights Management, with Guild Master and Right-Hand having the right by default",
+            "When a region queue is active, an overhead message displays information each time the region population is updated"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Player Navigation Changes",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Ctrl + Right-Clicking a region on the World Map begins navigation to that region",
+            "‘Navigate to this Region’ region map button has been moved to the bottom and has a new icon",
+            "Added a ‘Navigate to this Region Safely’ region map button"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Loot Distribution Optimization",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The loot acquired through various features is a very common pain point for players. While we must keep an eye on the overall output of loot to safeguard the economy, many times we’ve seen that while the overall value was there, it was unfairly distributed amongst party members."
+        },
+        {
+          "type": "image",
+          "src": "https://images.albiononline.com/https://assets.albiononline.com/uploads/media/default/media/51da6d4220131649e9951c02a7c0595d19f99454.jpeg"
+        },
+        {
+          "type": "paragraph",
+          "text": "In order to reduce the frequency of poor loot draws, we’ve changed the loot distribution algorithm to attempt to fairly distribute loot across all participants."
+        },
+        {
+          "type": "paragraph",
+          "text": "To fairly preserve the contribution of each player’s Premium, chests will attempt to evenly split the value of their contents while still maintaining that Premium players receive ~50% more loot than non-Premium players. To achieve this, the Premium bonus applies to each player’s contribution to the overall Premium loot bonus, as this makes certain that Premium players still receive an average of 50% more without having to draw in loot from other players."
+        },
+        {
+          "type": "paragraph",
+          "text": "It’s important to note that while we hope this system will reduce the amount of bad loot experiences, it’s impossible to have a perfect split each time. High-value items, which still have a chance to go to any player regardless of Premium status, will almost always result in a large disparity of value. This system is also sub-optimal when large groups of players open chests intended for fewer players, as there’s generally not enough loot to ensure an even split."
+        },
+        {
+          "type": "paragraph",
+          "text": "Most importantly, this new distribution will not increase lucky draws – we have systems in place for this such as large objective chests, high-rarity chests, and the rare chance of high-value items. These distribution methods remain unchanged."
+        },
+        {
+          "type": "paragraph",
+          "text": "We’ll be monitoring this change as it goes live to make sure it lives up to our expectations, and we hope to bring you further loot improvements in the near future."
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Spawn Rates Changes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Dynamic Spawn Rates introduced in the Paths to Glory update have been expanded to cover more features than before. The following features will now adjust their behavior depending on server activity:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Open-world dungeon mob/chest upgrade rates",
+            "Open-world dungeon event frequency",
+            "Respawn rates in open-world boss areas",
+            "Boss Lair Map spawn times",
+            "Wisp upgrade rates",
+            "Crystal Creature spawn times",
+            "Randomized Dungeon upgrade rates",
+            "Roads of Avalon chest upgrade rates",
+            "Dungeon spawn times in the Roads of Avalon"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "In addition, scaling is now slightly more aggressive in order to better balance earnings in peak hours and off hours."
+        }
+      ]
+    },
+    {
+      "title": "Armory Changes",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Added new ‘Tankiness’ metricThis applies to Group Dungeons, Avalonian Dungeons, and Hardcore ExpeditionsData for this metric will begin to be tracked with this patch, and its utility will increase over time",
+            "This applies to Group Dungeons, Avalonian Dungeons, and Hardcore Expeditions",
+            "Data for this metric will begin to be tracked with this patch, and its utility will increase over time"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "UI Changes",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "As Caerleon Market prices are primarily influenced by demand on the Black Market, Caerleon’s contribution to an item’s Estimated Market Value has been removedIn place of this, an Estimated Black Market Value has been added to the Item Details UI so that industrious players can easily see how much they can make by transporting items to Caerleon",
+            "In place of this, an Estimated Black Market Value has been added to the Item Details UI so that industrious players can easily see how much they can make by transporting items to Caerleon",
+            "Reduced size and duration of claimed item popup, and removed its audio",
+            "The ‘Claim All’ button in the Keeper Uprising Event UI now claims rewards from all three tabs"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Other Changes",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Players carrying Faction Battle Standards no longer receive invulnerability from Smuggler Stashes",
+            "Players who attack other players while carrying a Smuggler Crate now have a cooldown before they can receive Smuggler Stash invulnerability",
+            "[CONTROLLER] Added Player-Based target switching settingThis uses the player as the reference point when switching targets, rather than the targetTarget Selection Origin can be changed in the Controller section of the Settings Menu",
+            "This uses the player as the reference point when switching targets, rather than the target",
+            "Target Selection Origin can be changed in the Controller section of the Settings Menu"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Combat Balance Changes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For combat balance changes, see this forum post: forum.albiononline.com/index.php/Thread/223793"
+        }
+      ]
+    },
+    {
+      "title": "Fixes",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Fixed issue where navigation to a party member would remain active even after that player had left the party",
+            "Fixed issue where navigation to a player would reappear after changing regions, even if previously completed or canceled",
+            "Fixed issue where navigation to a specific region would not function when in the Underway",
+            "Fixed issue where it was not possible to search by subcategories of Laborer Journals and Contracts in the Marketplace UI",
+            "Fixed issue where Chat UI settings button would remain visible when chat was idle",
+            "Fixed an issue where the Overweight Warning when refining did not provide an option to remember the decision",
+            "[CONTROLLER] Fixed issue where the “All” and “Guild Only” buttons in the Party Finder were not useable",
+            "[CONTROLLER] Fixed issue where it was not possible to view a player’s stats via the Rankings UI",
+            "[CONTROLLER] Fixed issue where it was not possible to change a node’s re-spec values on the Destiny Board",
+            "Fixed issue where the Keeper Uprising mission ‘Defeat 30 mobs in Keeper Static Dungeons’ would only count killing blows, not contributions",
+            "[MOBILE] Fixed issue where losing connection while entering the game could cause the client to crash",
+            "[XBOX] Fixed issue where virtual keyboard would appear when using the Travel Planner with mouse and keyboard",
+            "[CONTROLLER] Fixed issue where player corpses could be interacted with even without loot",
+            "[CONTROLLER] Fixed issue where object interactions would prioritize proximity over direction, causing issues with opening chests"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ambush (Assassin Jacket): Fixed issue where invisibility persisted on cluster change",
+            "Cleanse (Leather Hoods): Fixed issue where statblock gave an incorrect range"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fixed issue where it was not possible to search by subcategories of Laborer Journals and Contracts in the Marketplace UI",
+            "Fixed issue where Chat UI settings button would remain visible when chat was idle",
+            "Fixed an issue where the Overweight Warning when refining did not provide an option to remember the decision",
+            "[CONTROLLER] Fixed issue where the “All” and “Guild Only” buttons in the Party Finder were not useable",
+            "[CONTROLLER] Fixed issue where it was not possible to view a player’s stats via the Rankings UI",
+            "[CONTROLLER] Fixed issue where it was not possible to change a node’s re-spec values on the Destiny Board",
+            "Fixed issue where the Keeper Uprising mission ‘Defeat 30 mobs in Keeper Static Dungeons’ would only count killing blows, not contributions",
+            "[MOBILE] Fixed issue where losing connection while entering the game could cause the client to crash",
+            "[XBOX] Fixed issue where virtual keyboard would appear when using the Travel Planner with mouse and keyboard",
+            "[CONTROLLER] Fixed issue where player corpses could be interacted with even without loot",
+            "[CONTROLLER] Fixed issue where object interactions would prioritize proximity over direction, causing issues with opening chests"
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fixed issue where the Keeper Uprising mission ‘Defeat 30 mobs in Keeper Static Dungeons’ would only count killing blows, not contributions",
+            "[MOBILE] Fixed issue where losing connection while entering the game could cause the client to crash",
+            "[XBOX] Fixed issue where virtual keyboard would appear when using the Travel Planner with mouse and keyboard",
+            "[CONTROLLER] Fixed issue where player corpses could be interacted with even without loot",
+            "[CONTROLLER] Fixed issue where object interactions would prioritize proximity over direction, causing issues with opening chests"
+          ]
+        }
+      ]
+    }
+  ]
+}

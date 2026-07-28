@@ -10,6 +10,9 @@ const {
     Events
 } = require("discord.js");
 
+// NUEVO
+const { startWatcher } = require("./services/scheduler/watcher");
+
 // Crear el cliente del bot
 const client = new Client({
     intents: [GatewayIntentBits.Guilds]
@@ -42,6 +45,9 @@ client.once(Events.ClientReady, readyClient => {
     console.log(`✅ Bot conectado como ${readyClient.user.tag}`);
     console.log(`📦 Comandos cargados: ${client.commands.size}`);
     console.log("====================================");
+
+    // Iniciar el comprobador automático de parches
+    startWatcher(client);
 
 });
 
