@@ -27,49 +27,50 @@ class SessionManager {
         if (!session) return;
 
         session.lastActivity = Date.now();
+
     }
 
     getAllSessions() {
         return [...this.sessions.values()];
     }
 
-}
+    setTimeout(userId, timeout) {
 
-setTimeout(userId, timeout) {
+        const session = this.sessions.get(userId);
 
-    const session = this.sessions.get(userId);
+        if (!session) return;
 
-    if (!session) return;
+        session.timeout = timeout;
 
-    session.timeout = timeout;
-
-}
-
-clearTimeout(userId) {
-
-    const session = this.sessions.get(userId);
-
-    if (!session || !session.timeout) return;
-
-    clearTimeout(session.timeout);
-
-    session.timeout = null;
-
-}
-
-resetTimeout(userId, callback) {
-
-    const session = this.sessions.get(userId);
-
-    if (!session) return;
-
-    if (session.timeout) {
-        clearTimeout(session.timeout);
     }
 
-    session.lastActivity = Date.now();
+    clearTimeout(userId) {
 
-    session.timeout = setTimeout(callback, 60 * 60 * 1000);
+        const session = this.sessions.get(userId);
+
+        if (!session || !session.timeout) return;
+
+        clearTimeout(session.timeout);
+
+        session.timeout = null;
+
+    }
+
+    resetTimeout(userId, callback) {
+
+        const session = this.sessions.get(userId);
+
+        if (!session) return;
+
+        if (session.timeout) {
+            clearTimeout(session.timeout);
+        }
+
+        session.lastActivity = Date.now();
+
+        session.timeout = setTimeout(callback, 60 * 60 * 1000);
+
+    }
 
 }
 
