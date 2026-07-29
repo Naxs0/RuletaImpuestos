@@ -12,8 +12,9 @@ const {
     saveSummary
 } = require("../ai/cache");
 
-const { publishPatch } = require("../discord/publisher");
-const { publishSummary } = require("../discord/summaryPublisher");
+const {
+    publishStoredPatch
+} = require("./publishStoredPatch");
 
 async function runPatchWorkflow(client) {
 
@@ -51,24 +52,6 @@ async function runPatchWorkflow(client) {
     }
 
     //--------------------------------------------------
-    // Publicación
-    //--------------------------------------------------
-
-    console.log("📨 Publicando parche...");
-
-    await publishPatch(client, translated);
-
-    console.log("✅ Parche publicado.");
-
-    //--------------------------------------------------
-    // Espera
-    //--------------------------------------------------
-
-    console.log("⏳ Esperando 5 segundos...");
-
-    await new Promise(resolve => setTimeout(resolve, 5000));
-
-    //--------------------------------------------------
     // Resumen
     //--------------------------------------------------
 
@@ -96,17 +79,17 @@ async function runPatchWorkflow(client) {
     }
 
     //--------------------------------------------------
-    // Publicar resumen
+    // Publicación
     //--------------------------------------------------
 
-    console.log("📨 Publicando resumen...");
+    console.log("📨 Publicando parche...");
 
-    await publishSummary(
+    await publishStoredPatch(
         client,
-        summary
+        patch.id
     );
 
-    console.log("✅ Resumen publicado.");
+    console.log("✅ Publicación completada.");
 
     return true;
 

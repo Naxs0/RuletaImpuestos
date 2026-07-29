@@ -12,10 +12,15 @@ const {
 
 // NUEVO
 const { startWatcher } = require("./services/scheduler/watcher");
+const messageCreateEvent = require("./events/messageCreate");
 
 // Crear el cliente del bot
 const client = new Client({
-    intents: [GatewayIntentBits.Guilds]
+    intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
+]
 });
 
 // Colección donde se guardarán los comandos
@@ -86,6 +91,10 @@ client.on(Events.InteractionCreate, async interaction => {
 
     }
 
+});
+
+client.on(Events.MessageCreate, async message => {
+    await messageCreateEvent.execute(message);
 });
 
 client.login(process.env.TOKEN);

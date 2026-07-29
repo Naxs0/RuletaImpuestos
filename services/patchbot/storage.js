@@ -83,14 +83,27 @@ function listPatches() {
 
 }
 
+function getLatestPatchId() {
+
+    const files = listPatches();
+
+    if (files.length === 0)
+        return null;
+
+    return Math.max(
+        ...files.map(file =>
+            parseInt(file.split("-")[0], 10)
+        )
+    );
+
+}
+
 module.exports = {
 
     savePatch,
-
     loadPatch,
-
     hasPatch,
-
-    listPatches
+    listPatches,
+    getLatestPatchId
 
 };
