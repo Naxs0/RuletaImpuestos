@@ -1,5 +1,10 @@
 const sessionManager = require("../services/ai/sessionManager");
-const { createPrivateChannel } = require("../services/discord/channelManager");
+const {
+    createPrivateChannel,
+    deleteChannel
+} = require("../services/discord/channelManager");
+const { handleConversation } = require("../services/ai/conversation");
+
 
 module.exports = {
 
@@ -12,6 +17,10 @@ module.exports = {
 
         // Ignorar mensajes privados
         if (!message.guild) return;
+
+if (await handleConversation(message)) {
+    return;
+}
 
         // Solo escuchar el canal de entrada
         if (message.channel.name !== "hablar-con-albionia") return;
@@ -39,26 +48,26 @@ module.exports = {
             guildId: message.guild.id,
             channelId: channel.id,
             createdAt: Date.now(),
-            lastActivity: Date.now()
+            lastActivity: Date.now(),
+            timeout: null
         });
 
-        // Avisar en el canal de entrada
-        await message.reply(
-            `He creado tu conversación privada: ${channel}`
-        );
+sessionManager.resetTimeout(message.author.id, async () => {
 
-        // Mensaje de bienvenida
-        await channel.send(
-`# 👋 Bienvenido a AlbionIA
+    await deleteChannel(channel);
 
-Este será tu espacio privado.
+    sessionManager.removeSession(message.author.id);
 
-Puedes preguntarme cualquier cosa sobre Albion Online.
+});
 
-La conversación se eliminará automáticamente después de **1 hora sin actividad**.
 
-¿Qué te gustaría saber?`
-        );
+// Avisar en el canal de entrada
+await message.reply(
+    `He creado tu conversación privada: ${channel}`
+);
+
+// Iniciar la conversación
+await startConversation(message, channel);
 
     }
 
