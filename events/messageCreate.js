@@ -3,8 +3,11 @@ const {
     createPrivateChannel,
     deleteChannel
 } = require("../services/discord/channelManager");
-const { handleConversation } = require("../services/ai/conversation");
-
+const {
+    handleConversation,
+    startConversation
+} = require("../services/ai/conversation");
+const memoryManager = require("../services/ai/memoryManager");
 
 module.exports = {
 
@@ -52,12 +55,14 @@ if (await handleConversation(message)) {
             timeout: null
         });
 
+memoryManager.create(message.author.id);
+
 sessionManager.resetTimeout(message.author.id, async () => {
 
     await deleteChannel(channel);
 
     sessionManager.removeSession(message.author.id);
-
+    memoryManager.clear(message.author.id);
 });
 
 

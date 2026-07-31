@@ -1,6 +1,46 @@
 const assistant = require("./assistant");
 const sessionManager = require("./sessionManager");
 const { deleteChannel } = require("../discord/channelManager");
+const memoryManager = require("./memoryManager");
+
+async function startConversation(message, channel) {
+
+    await channel.send(
+`# 👋 Bienvenido a AlbionIA
+
+Estoy procesando tu consulta...
+`
+    );
+
+    memoryManager.add(
+        message.author.id,
+        "user",
+        message.content
+    );
+
+    const response = await assistant.ask({
+
+        userId: message.author.id,
+
+        content: message.content,
+
+        history: memoryManager.get(message.author.id),
+
+        tools: [],
+
+        patches: []
+
+    });
+
+    memoryManager.add(
+        message.author.id,
+        "assistant",
+        response
+    );
+
+    await channel.send(response);
+
+}
 
 async function handleConversation(message) {
 
@@ -12,24 +52,6 @@ async function handleConversation(message) {
         return false;
     }
 
-async function startConversation(message, channel) {
-
-    const response = await assistant.ask(
-        message.author.id,
-        message.content
-    );
-
-    await channel.send(
-`# 👋 Bienvenido a AlbionIA
-
-Estoy procesando tu consulta...
-`
-    );
-
-    await channel.send(response);
-
-}
-
     sessionManager.resetTimeout(message.author.id, async () => {
 
         const channel = message.guild.channels.cache.get(session.channelId);
@@ -39,15 +61,40 @@ Estoy procesando tu consulta...
         }
 
         sessionManager.removeSession(message.author.id);
+        memoryManager.clear(message.author.id);
 
     });
 
-    const response = await assistant.ask(
-    message.author.id,
-    message.content
-);
+    // Guardar mensaje del usuario
+    memoryManager.add(
+        message.author.id,
+        "user",
+        message.content
+    );
 
-await message.channel.send(response);
+    // Consultar a Gemini con el historial
+    const response = await assistant.ask({
+
+        userId: message.author.id,
+
+        content: message.content,
+
+        history: memoryManager.get(message.author.id),
+
+        tools: [],
+
+        patches: []
+
+    });
+
+    // Guardar respuesta de la IA
+    memoryManager.add(
+        message.author.id,
+        "assistant",
+        response
+    );
+
+    await message.channel.send(response);
 
     return true;
 

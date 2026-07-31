@@ -1,20 +1,9 @@
 const { askGemini } = require("./gemini");
+const { assistantPrompt } = require("./prompts");
 
-async function ask(userId, content) {
+async function ask(context) {
 
-    const prompt = `
-Eres AlbionIA.
-
-Eres un asistente experto en Albion Online.
-
-Responde siempre en español.
-
-Si no sabes una respuesta, dilo claramente.
-
-Pregunta del usuario:
-
-${content}
-`;
+    const prompt = assistantPrompt(context);
 
     return await askGemini(prompt);
 
