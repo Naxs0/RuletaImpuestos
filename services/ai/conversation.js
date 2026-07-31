@@ -1,6 +1,7 @@
 const assistant = require("./assistant");
 const sessionManager = require("./sessionManager");
 const { deleteChannel } = require("../discord/channelManager");
+const { sendLongMessage } = require("../discord/messageSender");
 const memoryManager = require("./memoryManager");
 
 async function startConversation(message, channel) {

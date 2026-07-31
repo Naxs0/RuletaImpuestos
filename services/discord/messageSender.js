@@ -1,17 +1,53 @@
-async function sendLongMessage(channel, text) {
+const MAX_LENGTH = 2000;
 
-    const MAX = 2000;
+function splitMessage(text) {
 
-    if (text.length <= MAX) {
-        return channel.send(text);
-    }
+    const parts = [];
 
-    for (let i = 0; i < text.length; i += MAX) {
+    let remaining = text.trim();
 
-        await channel.send(
-            text.substring(i, i + MAX)
+    while (remaining.length > MAX_LENGTH) {
+
+        let splitIndex = remaining.lastIndexOf("\n\n", MAX_LENGTH);
+
+        if (splitIndex < 1000) {
+            splitIndex = remaining.lastIndexOf("\n", MAX_LENGTH);
+        }
+
+        if (splitIndex < 1000) {
+            splitIndex = remaining.lastIndexOf(" ", MAX_LENGTH);
+        }
+
+        if (splitIndex < 1000) {
+            splitIndex = MAX_LENGTH;
+        }
+
+        parts.push(
+            remaining.substring(0, splitIndex).trim()
         );
 
+        remaining = remaining.substring(splitIndex).trim();
+
+    }
+
+    if (remaining.length) {
+        parts.push(remaining);
+    }
+
+    return parts;
+
+}
+
+async function sendLongMessage(channel, text) {
+
+    if (!text || !text.trim()) {
+        return;
+    }
+
+    const messages = splitMessage(text);
+
+    for (const message of messages) {
+        await channel.send(message);
     }
 
 }
