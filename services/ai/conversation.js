@@ -38,7 +38,9 @@ Estoy procesando tu consulta...
         response
     );
 
-    await channel.send(response);
+    const { sendLongMessage } = require("../discord/messageSender");
+
+await sendLongMessage(channel, response);
 
 }
 
@@ -94,7 +96,7 @@ async function handleConversation(message) {
         response
     );
 
-    await message.channel.send(response);
+    await sendLongMessage(message.channel, response);
 
     return true;
 
