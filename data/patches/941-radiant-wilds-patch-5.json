@@ -1,0 +1,47 @@
+{
+  "id": 941,
+  "title": "Radiant Wilds Patch 5",
+  "url": "https://patchbot.io/games/albion-online/articles/941-radiant-wilds-patch-5",
+  "downloadedAt": "2026-08-04T17:17:02.531Z",
+  "intro": [],
+  "sections": [
+    {
+      "title": "Estimated Market Value Changes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In this patch, a change was made to Estimated Market Value to increase the accuracy of this estimation. Orders that are significantly higher or lower than the average will now be discarded to safeguard the estimation against outliers."
+        },
+        {
+          "type": "paragraph",
+          "text": "This may result in a change to the Estimated Market Value of some items and, as a result, the displayed sum in loot chests."
+        },
+        {
+          "type": "paragraph",
+          "text": "No changes have been made to the loot itself. This change only affects the calculation of each item’s value."
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Spawn Rates",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As players during off hours have had a substantial economic advantage over players in peak hours through significantly higher earnings, our goal with Dynamic Spawn Rates has been to even the playing field so that market prices aren’t driven up to be more out of reach for the average player."
+        },
+        {
+          "type": "paragraph",
+          "text": "While we will continue to monitor these changes, they have thus far reduced the advantage of playing during off times to ~35% more per player hour in both gathering and PvE gameplay."
+        },
+        {
+          "type": "paragraph",
+          "text": "However, chests in the Roads of Avalon had not been correctly prepared for the Dynamic Spawn Rate which resulted in a much more severe impact to these chests than the moderate changes we made elsewhere. We’ve resolved this issue and now chests in the Roads of Avalon will spawn significantly faster."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thank you for your patience and feedback on these changes."
+        }
+      ]
+    }
+  ]
+}

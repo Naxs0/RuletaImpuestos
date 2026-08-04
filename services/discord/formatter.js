@@ -1,42 +1,65 @@
-function createMessages(patch) {
+const { EmbedBuilder } = require("discord.js");
 
-    const messages = [];
+function createPatchEmbeds(patch) {
 
-    // Mensaje principal
-    let header =
-`# 📢 ${patch.title}
+    const embeds = [];
 
-🆔 **Patch:** ${patch.id}
-📅 **Descargado:** ${new Date(patch.downloadedAt).toLocaleString("es-CL")}
+    // ===== Portada =====
 
-━━━━━━━━━━━━━━━━━━`;
+    let index = "";
 
-    messages.push(header);
+    for (const section of patch.sections) {
+        index += `• ${section.title}\n`;
+    }
 
-    // Introducción
-    if (patch.intro.length) {
+    embeds.push(
+        new EmbedBuilder()
+            .setColor("#F39C12")
+            .setTitle(`📢 ${patch.title}`)
+            .setDescription(
+`Se detectó un nuevo parche de Albion Online.
 
-        let intro = "## 📖 Introducción\n\n";
+## Contenido
+
+${index}`
+            )
+            .setFooter({
+                text: `Albion Ruleta • ${new Date(patch.downloadedAt).toLocaleString("es-CL")}`
+            })
+    );
+
+    // ===== Introducción =====
+
+    if (patch.intro?.length) {
+
+        let text = "";
 
         for (const block of patch.intro) {
 
             if (block.type === "paragraph") {
-
-                intro += block.text + "\n\n";
-
+                text += block.text + "\n\n";
             }
 
         }
 
-        messages.push(intro);
+        if (text.trim()) {
+
+            embeds.push(
+                new EmbedBuilder()
+                    .setColor("#3498DB")
+                    .setTitle("📖 Introducción")
+                    .setDescription(text)
+            );
+
+        }
 
     }
 
-    // Secciones
+    // ===== Secciones =====
 
     for (const section of patch.sections) {
 
-        let text = `## ${section.title}\n\n`;
+        let text = "";
 
         for (const block of section.blocks) {
 
@@ -49,9 +72,7 @@ function createMessages(patch) {
             if (block.type === "list") {
 
                 for (const item of block.items) {
-
                     text += `• ${item}\n`;
-
                 }
 
                 text += "\n";
@@ -60,16 +81,19 @@ function createMessages(patch) {
 
         }
 
-        messages.push(text);
+        embeds.push(
+            new EmbedBuilder()
+                .setColor("#5865F2")
+                .setTitle(`📊 ${section.title}`)
+                .setDescription(text.substring(0, 4096))
+        );
 
     }
 
-    return messages;
+    return embeds;
 
 }
 
 module.exports = {
-
-    createMessages
-
+    createPatchEmbeds
 };

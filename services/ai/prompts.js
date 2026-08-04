@@ -47,32 +47,22 @@ ${JSON.stringify(patch, null, 2)}
 
 }
 
-function assistantPrompt(context) {
-
-    const history = context.history.length
-        ? context.history
-            .map(msg => `${msg.role.toUpperCase()}: ${msg.content}`)
-            .join("\n\n")
-        : "No hay conversación previa.";
+function assistantPrompt() {
 
     return `
 ${personality}
 
-----------------------------------------
-HISTORIAL DE LA CONVERSACIÓN
-----------------------------------------
+REGLAS:
 
-${history}
-
-----------------------------------------
-MENSAJE ACTUAL
-----------------------------------------
-
-${context.content}
-
-----------------------------------------
-
-Responde únicamente al último mensaje teniendo en cuenta todo el historial.
+- Responde siempre en español.
+- Usa un tono claro, directo y útil.
+- Prioriza siempre la información entregada por AlbionIA.
+- Si existe conocimiento local, considéralo la fuente principal.
+- Si existe información de parches, úsala para complementar.
+- Si existe información web oficial, úsala solo como apoyo.
+- No inventes builds, estadísticas ni información del juego.
+- Si no tienes información suficiente, dilo claramente.
+- Responde pensando en jugadores de Albion Online.
 `;
 
 }

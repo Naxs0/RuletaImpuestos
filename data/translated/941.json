@@ -1,0 +1,47 @@
+{
+  "id": 941,
+  "title": "Parche 5 de Radiant Wilds",
+  "url": "https://patchbot.io/games/albion-online/articles/941-radiant-wilds-patch-5",
+  "downloadedAt": "2026-08-04T17:17:02.531Z",
+  "intro": [],
+  "sections": [
+    {
+      "title": "Cambios en el valor estimado de mercado",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En este parche, se ha realizado un cambio en el valor estimado de mercado para aumentar la precisión de esta estimación. Las órdenes que sean significativamente más altas o más bajas que el promedio ahora se descartarán para proteger la estimación contra valores atípicos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto puede resultar en un cambio en el valor estimado de mercado de algunos objetos y, como consecuencia, en la suma mostrada en los cofres de botín."
+        },
+        {
+          "type": "paragraph",
+          "text": "No se han realizado cambios en el botín en sí. Este cambio solo afecta al cálculo del valor de cada objeto."
+        }
+      ]
+    },
+    {
+      "title": "Tasas de reaparición dinámicas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dado que los jugadores en horas de menor actividad han tenido una ventaja económica sustancial sobre los jugadores en horas pico mediante ganancias significativamente mayores, nuestro objetivo con las tasas de reaparición dinámicas ha sido nivelar el campo de juego para que los precios del mercado no aumenten hasta quedar fuera del alcance del jugador promedio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aunque seguiremos monitoreando estos cambios, hasta ahora han reducido la ventaja de jugar en horas de menor actividad a aproximadamente un 35% más por hora de jugador, tanto en recolección como en jugabilidad PvE."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sin embargo, los cofres en los Caminos de Avalon no se habían preparado correctamente para la tasa de reaparición dinámica, lo que resultó en un impacto mucho más severo en estos cofres que los cambios moderados que hicimos en otros lugares. Hemos resuelto este problema y ahora los cofres en los Caminos de Avalon reaparecerán significativamente más rápido."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gracias por su paciencia y comentarios sobre estos cambios."
+        }
+      ]
+    }
+  ]
+}

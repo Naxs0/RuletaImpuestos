@@ -1,0 +1,6 @@
+Aquí tienes los cambios más importantes del parche explicados al grano:
+
+* **Nuevo cálculo del valor estimado de mercado:** Se descartan las órdenes con precios atípicos (muy altos o muy bajos) para que el precio estimado de los objetos sea más preciso.
+* **El botín real no cambia:** Aunque la cifra o suma visual que ves en los cofres de botín cambie debido al nuevo cálculo, la cantidad y calidad de los objetos que caen sigue siendo exactamente la misma.
+* **Ajuste en horas de menor actividad:** Con las tasas de reaparición dinámicas, la ventaja económica de jugar en horas valle se ha reducido a aproximadamente un 35% más por hora tanto en recolección como en PvE.
+* **Buff a los cofres en Caminos de Avalon:** Se corrigió un error que afectaba gravemente la reaparición de los cofres en los Caminos de Avalon; ahora reaparecen significativamente más rápido.
