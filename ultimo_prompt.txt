@@ -56,40 +56,10 @@ REGLAS:
 
 ===== HISTORIAL =====
 
-USER: hi
-
-
-===== KNOWLEDGE =====
-
-[Build 1 | Grupales Hielo:]
-- Gran Bastón de Hielo 4.3
-- Hábito de Druida 4.3
-- Túnica de Druida 4.3
-- Sandalias Reales 4.3
-- Capa de Lymhurst 4.3 
-- Pocion de Energia y Tortilla de Cerdo (Tier 7)
-Imagen: https://i.imgur.com/lUj9BrN.jpeg
-
-[Build 2 | Grupales Hielo:]
-- Prisma de Hielos 4.3
-- Hábito de Druida 4.3
-- Túnica de Druida 4.3
-- Sandalias Reales 4.3
-- Capa de Morgana 4.3
-- Pocion de Energia y Tortilla de Cerdo (Tier 7)
-Imagen: https://i.imgur.com/W00Dap9.jpeg
-
-[Build 3 | Grupales Hielo:]
-- Bastón Ártico 4.3
-- Capucha de Asesino 4.3
-- Túnica de Druida 4.3
-- Sandalias Reales 4.3
-- Capa de Lymhurst 4.3 
-- Pocion de Energia y Guiso de Ternera
-Imagen: https://i.imgur.com/Nl5sJVm.jpeg
+USER: ji
 
 
 ===== USUARIO =====
 
-hi
+ji
 
