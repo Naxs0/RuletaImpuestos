@@ -57,192 +57,39 @@ REGLAS:
 ===== HISTORIAL =====
 
 USER: hi
-ASSISTANT: ¡Hola! Soy **AlbionIA**, tu asistente experto en Albion Online.
-
-Estoy aquí para ayudarte a tomar las mejores decisiones dentro del juego. Puedo asesorarte en:
-
-* **Builds y Equipamiento** (PvP, PvE, Mists, Dungeons, Corrupted, Hellgates, Arena, ZvZ)
-* **Economía y Mercado** (Crafteo, refinado, recolección, transporte, gestión de islas)
-* **Contenido de Mapa** (Roads of Avalon, Conquista, Guilds, Zonas Negras/Rojas)
-* **Balance y Parches**
-
-¿En qué te puedo ayudar hoy? Dime qué actividad quieres realizar o qué duda tienes y te daré la mejor recomendación.
-USER: ¿tienes alguna build guardada?
-ASSISTANT: Como **AlbionIA**, tengo acceso a la base de datos de las **builds meta** (más efectivas) para cada contenido del juego. 
-
-Para darte exactamente lo que necesitas, dime qué contenido quieres hacer. Mientras tanto, aquí tienes **3 de las builds más populares y recomendadas actualmente** según la actividad:
-
----
-
-### 1. Solo PvE / Fame Farm / Dungeons (Económica y muy resistente)
-* **Arma:** Hacha de Batalla (Battleaxe) + Antorcha (Torch)
-* **Cabeza:** Hábito de Erudito (Scholar Cowl) — *por la regeneración de mana y defensa.*
-* **Pecho:** Chaqueta de Mercenario (Mercenary Jacket) — *para curación masiva con el R.*
-* **Pies:** Cualesquiera botas de cuero (con *Sprints reconfortante* para reducir cooldowns).
-* **Capa:** Capa de Thetford (Thetford Cape) — *daño AoE extra.*
-* **Comida/Poción:** Estofado de Carne + Poción de Salud / Veneno.
-
-> **¿Por qué funciona?** Tiene un sustento de vida altísimo gracias a la **E** del Hacha de Batalla y la **R** de la Chaqueta de Mercenario. Es ideal para limpiar campamentos en Caminos de Avalón, Zonas Negras o Dungeons en solitario sin morir.
-
----
-
-### 2. Nieblas / PvP Solo (Movilidad y Ejecución)
-* **Arma:** Cortaalmas (Bloodletter) + Muichak (Muistak)
-* **Cabeza:** Capucha de Cazador (Hunter Hood) — *reflejo de daño.*
-* **Pecho:** Chaqueta de Asesino (Assassin Jacket) — *invisibilidad para resetear peleas o emboscar.*
-* **Pies:** Botas de Minero (Miner Boots) o Botas de Soldado (Soldier Boots) — *escapes o persecución.*
-* **Capa:** Capa de No Muerto (Undead Cape) — *invisibilidad automática al bajar de 15% de vida.*
-* **Comida/Poción:** Pastel de Ganso / Cerdo + Poción de Sanación.
-
-> **¿Por me funciona?** El Cortaalmas ejecuta instantáneamente a enemigos con menos del 40% de vida. Su gran movilidad te permite elegir qué peleas tomar y de cuáles escapar.
-
----
-
-### 3. Corrupted Dungeons / PvP 1v1 (Alto Daño)
-* **Arma:** Bastón de Fuego (1H Fire Staff) + Tomo de Hechizos (Tome of Spells)
-* **Cabeza:** Capucha de Cazador (Hunter Hood)
-* **Pecho:** Toga de Clérigo (Cleric Robe) — *escudo invulnerable para ganar intercambios.*
-* **Pies:** Botas de Soldado (Soldier Boots)
-* **Capa:** Capa de Caerleon o Thetford.
-* **Comida/Poción:** Guiso de Carne + Poción de Gigante o Veneno.
-
-> **¿Por qué funciona?** Mete una presión de daño absurda a distancia. Obstrúyele el paso al rival con las áreas de fuego y usa las defensivas de la Toga y la Capucha para ganar los intercambios directos.
-
----
-
-### ¿Buscas algo más específico?
-Dime lo siguiente y te armo la build exacta con habilidades, pasivas y estrategia de uso:
-1. **Actividad:** ¿PvP (ZvZ, Mists, Hellgates, Arena), PvE, Crafteo/Transporte o Recolección?
-2. **Presupuesto:** ¿Equipamiento económico (Tier 4.1/6.0) o de alto valor (Tier 8.1+)?
-3. **Rama preferida:** ¿Espadas, Arcos, Magia de Hielo, Cuero, Placa, etc.?
-USER: tienes datos guardados de builds?
-ASSISTANT: Sí, como **AlbionIA** tengo guardada la información de las **builds meta**, combinaciones de equipo, habilidades (Q, W, E y pasivas), consumibles y estrategias de combate para prácticamente todas las actividades de Albion Online.
-
-Mis datos cubren las siguientes categorías principales:
-
----
-
-### 1. Builds de PvP (Jugador contra Jugador)
-* **Nieblas (Mists) / Caminos de Avalón (Solo/Dúo):** Movilidad, ejecución y escape (ej. *Cortaalmas, Espada de Talla, Bastón Doble, Arco de Guerra*).
-* **Mazmorras Corruptas (Corrupted Dungeons 1v1):** Control de masas, sustain y kiting (ej. *Bastón de Fuego, Ballesta Ligera, Daga Maldita, Lanza de Garza*).
-* **Hellgates (2v2, 5v5, 10v10):** Sinergias compuestas por sanador + DPS/dps de ráfaga.
-* **Ganking / Caza de Jugadores:** CC (Control de Masas) y atrapamiento rápido (ej. *Garra, Atrapatierras, Vara de Caza*).
-* **ZvZ (Gremio contra Gremio / Grandes batallas):** Builds de Engage (iniciación), DPS AoE masivo y Support/Sostenimiento.
-* **Arena Cristalina:** Composiciones de control de objetivos y presión constante.
-
----
-
-### 2. Builds de PvE (Fame Farm / Limpieza)
-* **Solo / Dungeons Abiertas:** Gran sustento de vida y daño en área (ej. *Hacha de Batalla, Gran Hacha, Bastón de Naturaleza*).
-* **Estáticas / Dungeons Grupales:** Tanques de agarre, DPS de área masivo (ej. *Rompealmas, Incubador*) y Curadores (ej. *Bastón Sagrado Celestial*).
-* **HCE (Hardcore Expeditions):** Builds optimizadas con requerimiento de IP alto y conjuntos de equipo específicos para no morir a niveles altos.
-* **Tracking (Rastreo):** Builds optimizadas para derrotar a los jefes de rastreo en solo o grupo pequeño.
-
----
-
-### 3. Builds Utilitarias y Economía
-* **Recolección:** Set de recolector específico según el recurso (Fibra, Piel, Mineral, Madera, Roca) con habilidades de escape absoluto.
-* **Transporte Seguro:** Equipo de máxima resistencia e invisibilidad para cruzar Zonas Rojas y Negras cargado de mercancía.
-
----
-
-### ¿Cómo puedes consultar estos datos?
-Solo necesitas pedirme lo que buscas. Por ejemplo, me puedes decir:
-* *"Dame la build meta para **Bastón de Naturaleza en PvE solo**"*
-* *"¿Cuál es la mejor build económica para **gankear en grupo**?"*
-* *"Necesito una build para **recolectar pieles en Zona Negra** y escapar de gankers."*
-* *"¿Qué equipo se usa para **tanquear en mazmorras estáticas**?"*
-
-Dime qué arma o actividad tienes en mente y te daré la configuración completa.
-USER: ¿Tienes builds healer?
-ASSISTANT: ¡Sí, claro! Tengo guardadas varias **builds de Healer (Curador)** altamente efectivas, enfocadas principalmente en **contenido grupal** (Dungeons grupales, estáticas o PvE/PvP en grupo).
-
-Aquí tienes las **3 opciones principales del meta** utilizando la rama de Magia Sagrada:
-
----
-
-### 1. Build de Healer Grupal - Bastón Caído (Área masiva)
-Esta variante destaca por su **E** (*Santuario*), que genera un área enorme que cura a múltiples aliados y limpia efectos de control de masas.
-
-* **Arma:** Bastón Caído (*Tier 4.3*)
-* **Cabeza:** Casco de Guardatumbas (*Tier 4.3*)
-* **Pecho:** Chaqueta Real (*Tier 4.3*)
-* **Pies:** Zapatos de Acechador (*Tier 4.3*)
-* **Capa:** Capa de Lymhurst (*Tier 4.3*)
-* **Consumibles:** Poción de Energía + Tortilla de Cerdo (Tier 7)
-* 📸 **Ver Equipamiento:** https://i.imgur.com/NKX3aE1.jpeg
-
----
-
-### 2. Build de Healer Grupal - Bastón Exaltado (Movilidad e Interrupción)
-Ideal si necesitas moverte rápido, reubicarte o interrumpir enemigos mientras lanzas curaciones constantes.
-
-* **Arma:** Bastón Exaltado (*Tier 4.3*)
-* **Cabeza:** Casco de Guardatumbas (*Tier 4.3*)
-* **Pecho:** Chaqueta Real (*Tier 4.3*)
-* **Pies:** Zapatos de Acechador (*Tier 4.3*)
-* **Capa:** Capa de Lymhurst (*Tier 4.3*)
-* **Consumibles:** Poción de Energía + Tortilla de Cerdo (Tier 7)
-* 📸 **Ver Equipamiento:** https://i.imgur.com/aVeQLjf.jpeg
-
----
-
-### 3. Build de Healer Grupal - Bastón Sagrado (Objetivo Individual / Tanque)
-Al ser a una mano, te permite equipar la mano secundaria con el **Incensario Celestial**, aumentando en gran medida tu potencia de curación. Es perfecta para mantener con vida al tanque.
-
-* **Arma Principal:** Bastón Sagrado (*Tier 4.3*)
-* **Mano Secundaria:** Incensario Celestial (*Tier 4.3*)
-* **Cabeza:** Casco de Guardatumbas (*Tier 4.3*)
-* **Pecho:** Chaqueta Real (*Tier 4.3*)
-* **Pies:** Zapatos de Acechador (*Tier 4.3*)
-* **Capa:** Capa de Lymhurst (*Tier 4.3*)
-* **Consumibles:** Poción de Energía + Tortilla de Cerdo (Tier 7)
-* 📸 **Ver Equipamiento:** https://i.imgur.com/9IEtguP.jpeg
-
----
-
-### ¿Por qué funciona esta combinación de equipo?
-
-* **Chaqueta Real:** Su habilidad activa crea un área que reduce drásticamente los tiempos de reutilización (*cooldowns*) tuyos y de tus aliados, permitiéndote spammar curaciones mucho más rápido.
-* **Casco de Guardatumbas:** Ofrece una curación de emergencia instantánea y enorme para salvar a un aliado (como el tanque) que esté a punto de morir.
-* **Capa de Lymhurst + Poción de Energía:** Las habilidades de curación consumen muchísimo maná; esta combinación te garantiza sostenimiento continuo durante peleas largas.
-* **Tortilla de Cerdo (T7):** Otorga reducción de cooldowns y mayor velocidad de casteo.
-
-¿Te interesa alguna build de curador para contenido más enfocado en **PvP/Mists (1v1, 2v2)** o **ZvZ**? Dime y te muestro las alternativas.
-USER: tienes builds de arco?
 
 
 ===== KNOWLEDGE =====
 
-[Build 1 | Grupales Arcos:]
-- Arco Perforanieblas 4.3
-- Capucha de Asesino 4.3  
-- Túnica de Druida 4.3 
-- Sandalias Reales 4.3 
-- Capa de Lymhurst 4.3
-- Pocion de Energia y Guiso de Ternera
-Imagen: https://i.imgur.com/KWQxxJe.jpeg
-
-[Build 2 | Grupales Arcos:]
-- Arco Largo 4.3
-- Capucha de Asesino 4.3  
-- Túnica de Druida 4.3 
-- Sandalias Reales 4.3 
-- Capa de Lymhurst 4.3
-- Pocion de Energia y Guiso de Ternera
-Imagen: https://i.imgur.com/gn8GOAO.jpeg
-
-[Build 3 | Grupales Arcos:]
-- Arco Badon 4.3
-- Capucha de Asesino 4.3  
-- Chaqueta Real 4.3
-- Zapatos de Acechador 4.3
-- Capa de Lymhurst 4.3
+[Build 1 | Grupales Hielo:]
+- Gran Bastón de Hielo 4.3
+- Hábito de Druida 4.3
+- Túnica de Druida 4.3
+- Sandalias Reales 4.3
+- Capa de Lymhurst 4.3 
 - Pocion de Energia y Tortilla de Cerdo (Tier 7)
-Imagen: https://i.imgur.com/DkH9O7L.jpeg
+Imagen: https://i.imgur.com/lUj9BrN.jpeg
+
+[Build 2 | Grupales Hielo:]
+- Prisma de Hielos 4.3
+- Hábito de Druida 4.3
+- Túnica de Druida 4.3
+- Sandalias Reales 4.3
+- Capa de Morgana 4.3
+- Pocion de Energia y Tortilla de Cerdo (Tier 7)
+Imagen: https://i.imgur.com/W00Dap9.jpeg
+
+[Build 3 | Grupales Hielo:]
+- Bastón Ártico 4.3
+- Capucha de Asesino 4.3
+- Túnica de Druida 4.3
+- Sandalias Reales 4.3
+- Capa de Lymhurst 4.3 
+- Pocion de Energia y Guiso de Ternera
+Imagen: https://i.imgur.com/Nl5sJVm.jpeg
 
 
 ===== USUARIO =====
 
-tienes builds de arco?
+hi
 

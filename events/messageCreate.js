@@ -21,12 +21,13 @@ module.exports = {
         // Ignorar mensajes privados
         if (!message.guild) return;
 
-if (await handleConversation(message)) {
-    return;
-}
+        // Manejar conversaciones privadas
+        if (await handleConversation(message)) {
+            return;
+        }
 
-        // Solo escuchar el canal de entrada
-        if (message.channel.name !== "hablar-con-albionia") return;
+        // Solo permitir iniciar conversaciones desde el canal oficial de AlbionIA
+        if (message.channel.id !== process.env.ALBIONIA_CHANNEL_ID) return;
 
         // ¿Ya tiene una sesión?
         if (sessionManager.hasSession(message.author.id)) {
@@ -55,24 +56,24 @@ if (await handleConversation(message)) {
             timeout: null
         });
 
-memoryManager.create(message.author.id);
+        memoryManager.create(message.author.id);
 
-sessionManager.resetTimeout(message.author.id, async () => {
+        sessionManager.resetTimeout(message.author.id, async () => {
 
-    await deleteChannel(channel);
+            await deleteChannel(channel);
 
-    sessionManager.removeSession(message.author.id);
-    memoryManager.clear(message.author.id);
-});
+            sessionManager.removeSession(message.author.id);
+            memoryManager.clear(message.author.id);
 
+        });
 
-// Avisar en el canal de entrada
-await message.reply(
-    `He creado tu conversación privada: ${channel}`
-);
+        // Avisar en el canal de entrada
+        await message.reply(
+            `He creado tu conversación privada: ${channel}`
+        );
 
-// Iniciar la conversación
-await startConversation(message, channel);
+        // Iniciar la conversación
+        await startConversation(message, channel);
 
     }
 

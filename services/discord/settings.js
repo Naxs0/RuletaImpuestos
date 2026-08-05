@@ -37,10 +37,16 @@ function setPatchChannel(id) {
 
 }
 
+function getAlbionIAChannel() {
+    return process.env.ALBIONIA_CHANNEL_ID;
+}
+
 module.exports = {
 
     getPatchChannel,
 
-    setPatchChannel
+    setPatchChannel,
+
+    getAlbionIAChannel
 
 };
